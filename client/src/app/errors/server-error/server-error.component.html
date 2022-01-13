@@ -1,0 +1,15 @@
+<h4>Internal Server Error</h4>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error : {{error.message}}</h5>
+    <p class="font-weight-bold">Note:If you are seeing this then Angular is probably not to blame</p>
+    <p>What to do next ?</p>
+    <ol>
+        <li>Open the dev tools</li>
+        <li>Inspect the network tab</li>
+        <li>Check the failing request</li> 
+        <li>Examine the request URL</li>
+        <li>Reproduce the error in Postman</li>
+    </ol>
+    <p>Following the stack trace</p>
+    <code class='mt-5' style='background-color:rgb(149, 186, 221)'>{{error.details}}</code>
+</ng-container>
