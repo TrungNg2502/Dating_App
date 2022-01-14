@@ -8,6 +8,6 @@ export class UserParams
     pageNumber = 1;
     pageSize = 6;
     constructor (user : User){
-        this.gender = user.gender == "male" ? "female" : "male"
+        this.gender = user.gender == "male" ? "female" : "male";
     }
 }

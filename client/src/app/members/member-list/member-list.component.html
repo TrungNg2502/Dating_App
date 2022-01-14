@@ -1,3 +1,71 @@
+<div class="text-center mt-3">
+  <h2>Your matches - {{ pagination?.totalItems }} found</h2>
+</div>
+<div class="container mt-3">
+  <form
+    #form="ngForm"
+    class="form-inline mb-3"
+    (ngSubmit)="loadMembers()"
+    autocomplete="off"
+  >
+    <div class="form-group mb-2" style="display: flex">
+      <div>Age from:</div>
+      <input
+        type="number"
+        class="form-control"
+        style="
+          margin: 10px;
+          width: 70px;
+          margin-top: -10px;
+          margin-bottom: 10px;
+          padding-right: 5px;
+          padding-bottom: 0px;
+          padding-top: 0px;
+          padding-left: 20px;
+        "
+        name="minAge"
+        [(ngModel)]="userParams.minAge"
+      />
+      <div>to:</div>
+      <input
+        type="number"
+        class="form-control"
+        style="
+          margin: 10px;
+          width: 70px;
+          margin-top: -10px;
+          margin-bottom: 10px;
+          padding-right: 10px;
+          padding-bottom: 0px;
+          padding-top: 0px;
+          padding-left: 20px;
+        "
+        name="maxAge"
+        [(ngModel)]="userParams.maxAge"
+      />
+
+      <div class="form-group mb-2"> 
+        <label>Gender: </label>
+        <select name="gender" style="width: 130px" class="form-comtrol ml-1" [(ngModel)]="userParams.gender">
+          <option *ngFor="let gender of genderList" [value]="gender.value">
+            {{ gender.display }}
+          </option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin: 10px ;  margin-top:-12px">
+        Apply Filters
+      </button>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        style="margin: 10px; margin-top:-12px"
+        (click)="resetFilters()"
+      >
+        Reset
+      </button>
+    </div>
+  </form>
+</div>
 <div class="row">
   <div *ngFor="let member of members" class="col-2">
     <app-member-card [member]="member"></app-member-card>

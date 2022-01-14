@@ -17,10 +17,13 @@ export class MemberListComponent implements OnInit {
   pagination: Pagination;
   userParams :UserParams;
   user : User;
-  pageNumber = 1;
-  pageSize = 6;
-  constructor(private memberService: MembersService) {
-    
+  genderList = [{value: 'male', display: 'Male'}, {value: 'female', display: 'Female'}];
+
+  constructor(private memberService: MembersService, private accountService: AccountService) {
+    this.accountService.currentUser$.pipe(take(1)).subscribe(user => {
+      this.user = user;
+      this.userParams = new UserParams(user);
+    })
   }
 
   ngOnInit() {
@@ -28,14 +31,18 @@ export class MemberListComponent implements OnInit {
   }
   loadMembers() {
     this.memberService
-      .getMembers(this.pageNumber, this.pageSize)
+      .getMembers(this.userParams)
       .subscribe((response) => {
         this.members = response.result;
         this.pagination = response.pagination;
       });
   }
+  resetFilters(){
+    this.userParams = new UserParams(this.user);
+    this.loadMembers(); 
+  }
   pageChanged(event: any) {
-    this.pageNumber = event.page;
+    this.userParams.pageNumber = event.page;
     this.loadMembers();
   }
 }
