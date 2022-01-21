@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q7kyhFbMucycuBk7wig2wDvJuXH7fph3HgI85232c7kRpMdJaJh2XGjYJwIpu7wog417WoYF755MLMpbVu8fiw==",
+  "dgSpecHash": "iWXL2a8CjIb+5rqiYEZBYrSSQilsLFox7YVB9J1NAhr7W4/+8TMyNQGV9VefsXk6FvR+ObQHBqjVwdITHEJaaQ==",
   "success": true,
   "projectFilePath": "D:\\DatingApp\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -56,7 +56,8 @@
     "C:\\Users\\Trung Ng\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Trung Ng\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Trung Ng\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
-    "C:\\Users\\Trung Ng\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+    "C:\\Users\\Trung Ng\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\Trung Ng\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
   ],
   "logs": []
 }
